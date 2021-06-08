@@ -149,6 +149,25 @@ class PessoaController{
         }
     }
 
+    //restaurar matricula
+
+    static async restauraMatricula(req, res) {
+        const idMatricula = req.params.matriculaId
+        const idEstudante = req.params.estudanteId
+        
+        try {
+            await database.Matriculas.restore( { 
+                where: { 
+                    id: Number(idMatricula),
+                    estudante_id: Number(idEstudante)
+                }
+            })
+            return res.status(200).json( { mensagem: `Matricula id ${idMatricula} do estudante ${idEstudante} restaurada com sucesso`})            
+        } catch (error) {
+            return res.status(500).json(error)
+        }
+    }
+
 
 
 }
