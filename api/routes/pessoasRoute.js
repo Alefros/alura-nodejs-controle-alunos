@@ -12,11 +12,15 @@ router.post('/pessoas', PessoaController.criaPessoa)
 
 router.put('/pessoas/:id', PessoaController.atualizaPessoa)
 
+router.post('/pessoas/:id/restaura', PessoaController.restauraPessoa)
+
 router.delete('/pessoas/:id', PessoaController.apagaPessoa)
 
 router.get('/pessoas/:estudanteId/matricula/:matriculaId', PessoaController.pegaUmaMatricula)
 
 router.post('/pessoas/:id/matricula', PessoaController.criaMatricula)
+
+router.post('/pessoas/:estudanteId/matricula/:matriculaId', PessoaController.restauraMatricula)
 
 router.put('/pessoas/:estudanteId/matricula/:matriculaId', PessoaController.atualizaMatricula)
 
