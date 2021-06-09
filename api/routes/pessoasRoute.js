@@ -20,6 +20,8 @@ router.delete('/pessoas/:id', PessoaController.apagaPessoa)
 
 router.get('/pessoas/:estudanteId/matricula/:matriculaId', PessoaController.pegaUmaMatricula)
 
+router.get('/pessoas/:estudanteId/matricula', PessoaController.pegaMatriculas)
+
 router.post('/pessoas/:id/matricula', PessoaController.criaMatricula)
 
 router.post('/pessoas/:estudanteId/matricula/:matriculaId', PessoaController.restauraMatricula)
