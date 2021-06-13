@@ -22,6 +22,10 @@ router.get('/pessoas/:estudanteId/matricula/:matriculaId', PessoaController.pega
 
 router.get('/pessoas/:estudanteId/matricula', PessoaController.pegaMatriculas)
 
+router.get('/pessoas/matricula/:turmaId/confirmadas', PessoaController.pegaMatriculasPorTurma)
+
+router.get('/pessoas/matricula/lotada', PessoaController.pegaTurmasLotadas)
+
 router.post('/pessoas/:id/matricula', PessoaController.criaMatricula)
 
 router.post('/pessoas/:estudanteId/matricula/:matriculaId', PessoaController.restauraMatricula)
