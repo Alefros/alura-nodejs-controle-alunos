@@ -2,6 +2,9 @@ const database = require('../models')
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 
+const { TurmasServices } = require("../services")
+const turmasServices = new TurmasServices()
+
 class TurmaController{
 
     static async pegaTodasTurmas(req, res){
