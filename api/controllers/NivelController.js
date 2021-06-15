@@ -1,7 +1,7 @@
 const database = require('../models')
 
-const Services = require('../services/Services')
-const niveisServices = new Services('Niveis')
+const { NiveisServices } = require("../services")
+const niveisServices = new NiveisServices()
 
 class NivelController {
 
